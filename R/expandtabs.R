@@ -16,5 +16,5 @@
 #' @export
 #' @seealso [Python str.expandtabs() documentation](https://docs.python.org/3/library/stdtypes.html#str.expandtabs)
 strs_expandtabs <- function(string, tabsize = 8) {
-  stringi::stri_replace_all_regex(string, "\\t", base::strrep(" ", tabsize))
+  stringi::stri_replace_all_regex(string, "\\t", stringi::stri_dup(" ", tabsize))
 }
