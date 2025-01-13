@@ -16,5 +16,5 @@
 #' @seealso [Python str.replace() documentation](https://docs.python.org/3/library/stdtypes.html#str.replace)
 #' @export
 strs_replace <- function(string, substring, replacement) {
-  stringi::stri_replace_all_fixed(string, substring, replacement)
+  stringi::stri_replace_all_fixed(string, substring, replacement, vectorize_all = FALSE)
 }
